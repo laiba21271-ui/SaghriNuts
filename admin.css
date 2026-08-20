@@ -1,0 +1,629 @@
+/* =========================
+   SAGHRINUTS ADMIN CSS
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FCF6EA;
+    color: #4A3425;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   LOGIN POPUP
+   ========================= */
+
+#loginPopup {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+}
+
+.login-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-box h2 {
+    margin: 0 0 22px;
+    font-size: 24px;
+    color: #4A3425;
+}
+
+.login-box input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-box input:focus {
+    border-color: #2e7d32;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-radius: 8px;
+    background: #2e7d32;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #256628;
+}
+
+#loginError {
+    color: #d32f2f;
+    font-size: 13px;
+    margin: 12px 0 0;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+    width: 100%;
+    min-height: 70px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    background-color: #FCF6EA;
+    border-bottom: 1px solid #D8C5AE;
+}
+
+.logo {
+    font-family: 'Allura', cursive;
+    font-size: 38px;
+    color: #b86d33;
+    white-space: nowrap;
+}
+
+.admin-title {
+    flex: 1;
+    border-left: 1px solid #D8C5AE;
+    padding-left: 30px;
+}
+
+.admin-title h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #4A3425;
+}
+
+.admin-name {
+    font-size: 13px;
+    color: #6B4530;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.notification {
+    position: relative;
+    font-size: 18px;
+    color: #6B4530;
+    cursor: pointer;
+}
+
+.notification span {
+    position: absolute;
+    top: -7px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    background-color: #8A5A3C;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #6B4530;
+    font-size: 12px;
+}
+
+.admin-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #E8D6BF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6B4530;
+}
+
+/* =========================
+   MENU
+   ========================= */
+
+.admin-menu {
+    width: 100%;
+    min-height: 52px;
+    background-color: #b86d33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.admin-menu a {
+    color: #FCF6EA;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 8px 17px;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+
+.admin-menu a:hover {
+    background-color: #805A40;
+}
+
+.admin-menu a.active {
+    background-color: #FCF6EA;
+    color: #6B4530;
+}
+
+/* =========================
+   MAIN CONTAINER & WELCOME
+   ========================= */
+
+.admin-container {
+    width: 86%;
+    max-width: 1200px;
+    margin: 35px auto;
+    flex: 1;
+}
+
+.welcome {
+    margin-bottom: 25px;
+}
+
+.welcome h2 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #4A3425;
+    margin-bottom: 4px;
+}
+
+.welcome p {
+    font-size: 12px;
+    color: #8A6A52;
+}
+
+/* =========================
+   SUMMARY
+   ========================= */
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.summary-box {
+    background-color: #FFFFFF;
+    border: 1px solid #E0D0BD;
+    border-radius: 7px;
+    padding: 18px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.summary-box h3 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #8A6A52;
+    margin-bottom: 5px;
+}
+
+.summary-box p {
+    font-size: 21px;
+    font-weight: 500;
+    color: #6B4530;
+}
+
+/* =========================
+   SECTIONS & TABLES
+   ========================= */
+
+.admin-section {
+    background-color: #FFFFFF;
+    border: 1px solid #E0D0BD;
+    border-radius: 7px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    padding: 16px 20px;
+    border-bottom: 1px solid #E7DCCE;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-title h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #4A3425;
+}
+
+.section-title a {
+    font-size: 11px;
+    color: #6B4530;
+    text-decoration: none;
+}
+
+.section-title a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #FCF6EA;
+    color: #765239;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 12px 20px;
+}
+
+td {
+    color: #57402F;
+    font-size: 11px;
+    padding: 13px 20px;
+    border-top: 1px solid #EFE5DA;
+}
+
+tbody tr {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+tbody tr:hover {
+    background-color: #FAF4EB;
+}
+
+td:last-child {
+    color: #6B4530;
+}
+
+/* =========================
+   PRODUCTS
+   ========================= */
+
+.product-list {
+    padding: 0 20px;
+}
+
+.product-row {
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #EFE5DA;
+    padding: 10px 0;
+}
+
+.product-row:last-child {
+    border-bottom: none;
+}
+
+.product-row h3 {
+    font-size: 13px;
+    font-weight: 500;
+    color: #4A3425;
+    margin-bottom: 3px;
+}
+
+.product-row p {
+    font-size: 10px;
+    color: #8A6A52;
+}
+
+.product-row strong {
+    font-size: 12px;
+    font-weight: 500;
+    color: #6B4530;
+}
+
+/* =========================
+   BUTTONS & MODALS (NEWLY ADDED)
+   ========================= */
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary {
+    background-color: #2e7d32;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #256628;
+}
+
+.btn-danger {
+    background-color: #d32f2f;
+    color: #ffffff;
+}
+
+.btn-danger:hover {
+    background-color: #b71c1c;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    padding: 20px;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-content h3 {
+    font-size: 18px;
+    color: #4A3425;
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 18px;
+    top: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #8A6A52;
+}
+
+.close-btn:hover {
+    color: #4A3425;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    font-size: 11px;
+    font-weight: 500;
+    color: #6B4530;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #D8C5AE;
+    border-radius: 6px;
+    outline: none;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group input:focus {
+    border-color: #b86d33;
+}
+
+.order-details-body {
+    margin: 15px 0 20px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #57402F;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    border-top: 1px solid #D8C5AE;
+    text-align: center;
+    padding: 17px;
+    color: #8A6A52;
+    font-size: 10px;
+    background-color: #FCF6EA;
+    margin-top: auto;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .admin-container {
+        width: 92%;
+    }
+
+    .summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        min-height: auto;
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+
+    .admin-title {
+        width: 100%;
+        order: 3;
+        border-left: none;
+        border-top: 1px solid #D8C5AE;
+        padding: 10px 0 0;
+    }
+
+    .admin-title h1 {
+        font-size: 19px;
+    }
+
+    .admin-name {
+        margin-left: auto;
+        font-size: 11px;
+    }
+
+    .admin-menu {
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .admin-menu a {
+        font-size: 10px;
+        padding: 8px 12px;
+    }
+
+    .admin-container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .welcome h2 {
+        font-size: 22px;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .summary-box {
+        padding: 15px;
+    }
+
+    .section-title {
+        padding: 14px;
+    }
+
+    .section-title h2 {
+        font-size: 16px;
+    }
+
+    .section-title a {
+        font-size: 10px;
+    }
+
+    table {
+        min-width: 550px;
+    }
+
+    .admin-section {
+        overflow-x: auto;
+    }
+
+    .product-list {
+        padding: 0 14px;
+        min-width: 300px;
+    }
+
+    .product-row {
+        min-height: 65px;
+    }
+
+    .product-row h3 {
+        font-size: 12px;
+    }
+
+    .product-row p {
+        font-size: 9px;
+    }
+
+    .product-row strong {
+        font-size: 11px;
+    }
+}

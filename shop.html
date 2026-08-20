@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saghri Nuts - Shop</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body class="sn-shop-body-bg">
+
+    <div class="logo sn-shop-logo">SaghriNuts</div>
+
+    <div class="sn-shop-container">
+        <p class="sn-shop-heading">Products</p>
+        <div class="sn-grid-box" id="sn_products_grid">
+            <p style="text-align:center; grid-column:1/-1; padding:20px;">Loading products...</p>
+        </div>
+    </div>
+
+    <!-- FIREBASE SDKs & MAIN SCRIPT -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
